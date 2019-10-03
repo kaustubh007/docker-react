@@ -1,0 +1,11 @@
+language: node_js
+services:
+  - docker
+
+before-before_install:
+  - docker build -t kaustubh009/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run kaustubh009/docker-react npm run test -- --coverage 
+
+
