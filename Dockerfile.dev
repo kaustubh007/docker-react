@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM mongo_express
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
