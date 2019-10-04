@@ -9,3 +9,12 @@ script:
   - docker run kaustubh009/docker-react npm run test -- --coverage 
 
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket: "elasticbeanstalk-us-east-2-099602482958"
+  bucket-path: "docker-react"
+  on: 
+    branch: master
